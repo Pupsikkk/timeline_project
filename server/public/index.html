@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Someshit</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav></nav>
+    </header>
+    <main>
+        <div class="main_wrapper">
+            <section class="timeline-wrapper" style="height: 700px;">
+                <div class="timeline-header">HISTORY TIMELINE</div>
+                <div class="timeline-years">
+                    <div class="timeline-years-container"></div>
+                    <div class="timeline-info-container"></div>
+                </div>
+                <div class="timeline-field"></div>
+                <script src="/js/src.js"></script>
+                <script src="/js/eventListeners.js"></script>
+                <script src="/js/data.js"></script>
+                <script src="/js/table.js"></script>
+                <script src="/js/script.js"></script>
+            </section>
+        </div>
+        <aside>
+            <div style="position: sticky; top: 10px;">
+                <div>ОТ</div>
+                <input class="fir" type="number" onchange="changeValue()" value="1770" min="-500" max="2021">
+                <div>ДО</div>
+                <input class="sec" type="number" onchange="changeValue()" value="2021" min="-500" max="2021">
+                <div>Шаг</div>
+                <input class="third" type="number" onchange="changeValue()" value="1" min="1" max="100">
+                <div>Масштаб</div>
+                <input class="fourth" type="number" onchange="changeValue()" value="20" min="2" max="100">
+                <div>Ширина колонок</div>
+                <input class="columnWidth" type="number" onchange="changeColumnWidth()" value="50" min="30" max="80">
+            </div>
+        </aside>
+    </main>
+    <footer></footer>
+</body>
+</html>

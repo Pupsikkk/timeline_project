@@ -1,0 +1,192 @@
+1.Pеєстрація/вхід
+ЕНДПОІНТ => /api/user/registration
+
+{
+    "login": "admin",
+    "password": "r7p*ew;t_4E8ewS"
+}
+
+{
+    "login": "vlad",
+    "password": "vladdddd"
+}
+
+{
+    "login": "nata",
+    "password": "nataaaaa"
+}
+
+
+---------------------------------------------------------------------------
+
+2.Додаєм інстанс
+POST
+ЕНДПОІНТ => /api/data/instance 
+
+---ШАБЛОН---
+{
+    "instance": {
+        "name": "", 
+        "fromYear": 0,
+        "toYear": 2000,
+        "type": {
+            "type_name": "",
+            "color": "#000000"
+        },
+        "subtypes": [{
+            "subtype_name": "",
+            "color": "#000000"
+        }],
+        "info":{
+            "description": "",
+            "links": [""]
+        }
+    }
+}
+
+---ШАБЛОН---
+
+{
+    "instance": {
+        "name": "Владислав Шалавинский",
+        "fromYear": 2001,
+        "toYear": 2021,
+        "type": {
+            "type_name": "Человек",
+            "color": "#000000"
+        },
+        "subtypes": [{
+            "subtype_name": "Недо бекендер",
+            "color": "#000000"
+            },
+            {
+            "subtype_name": "Студент",
+            "color": "#000000"
+            }
+            ],
+        "info":{
+            "description": "Владос учится в КПИ",
+            "links": ["https://t.me/vash_pupsikkk"]
+        }
+    }
+}
+
+{
+    "instance": {
+        "name": "Наташа Полеха", 
+        "fromYear": 2002,
+        "toYear": 2021,
+        "type": {
+            "type_name": "Человек",
+            "color": "#000000"
+        },
+        "subtypes": [{
+                "subtype_name": "Недо фронтендер",
+                "color": "#000000"
+            },
+            {
+                "subtype_name": "Студент",
+                "color": "#000000"
+            }],
+        "info":{
+            "description": "",
+            "links": [""]
+        }
+    }
+}
+
+{
+    "instance": {
+        "name": "Киево-Печерская Лавра", 
+        "fromYear": 1051,
+        "toYear": 2021,
+        "type": {
+            "type_name": "Историческое здание",
+            "color": "#000000"
+        },
+        "subtypes": [{
+            "subtype_name": "Церковь",
+            "color": "#000000"
+        }],
+        "info":{
+            "description": "",
+            "links": [""]
+        }
+    }
+}
+
+{
+    "instance": {
+        "name": "Железный человек",
+        "fromYear": 1991,
+        "toYear": 2021,
+         "type": {
+            "type_name": "Вымышленный персонаж",
+            "color": "#000000"
+        },
+        "subtypes": [{
+                "subtype_name": "Вселенная MARVEL",
+                "color": "#000000"
+            },
+            {
+                "subtype_name": "Миллиардер",
+                "color": "#000000"
+        }],
+        "info":{
+            "description": "Самый крутой персонаж марвел ever",
+            "links": [
+                "https://static.wikia.nocookie.net/disney/images/9/96/Iron-Man-AOU-Render.png/revision/latest?cb=20150208173247",
+                "https://kvmarvel.ru/wp-content/uploads/1970/05/ironman-1.png"
+                ]
+        }
+    }
+}
+
+---------------------------------------------------------------------------
+
+3. Запит відфільтрованих данних
+POST
+ЕНДПОІНТ => /api/data/getFilteredData
+
+---ШАБЛОН---
+
+{
+    "filter": {
+        "fromYear": 2000,
+        "toYear": 2020,
+        "subtypes": ["Подтип", ...]
+    }
+}
+
+---ШАБЛОН---
+
+{
+    "filter": {
+        "fromYear": 1990,
+        "toYear": 2002,
+        "subtypes": ["Миллиардер", "Церковь", "Студент"]
+    }
+}
+
+---------------------------------------------------------------------------
+
+4. Збереження фільтрів користувача
+
+POST
+ЕНДПОІНТ => /api/data/saveFilter
+
+{
+    "filter": {
+        "fromYear": 1500,
+        "toYear": 2000,
+        "types": ["Человек", "Вымышленный персонаж", "Тест"],
+        "subtypes": ["Недо бекендер", "Миллиардер"]
+    }
+}
+
+---------------------------------------------------------------------------
+
+5. Зміна картинки для колонки
+
+
+---------------------------------------------------------------------------
